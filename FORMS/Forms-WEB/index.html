@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Assets/img/Foto Logo .jpg" type="image/x-icon">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="Assets/img/undraw_forms_re_pkrt.svg" alt="Imagem Ilustrativa Formulário">
+        </div>
+        <div class="form">
+            <!--AÇÃO BACKEND-->
+            <form action="http://localhost:8080/api/cliente" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Preencha o Formulário</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome Completo</label>
+                        <input id="name" type="text" name="name" placeholder="Digite seu Nome Completo" autocomplete="none" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="estadocivil">Estado Civil</label>
+                        <select list="estadocivil" name="estadocivil" required>     
+                                <option class="opttest" value="" selected>-- Marque uma Opção --</option>
+                                <option class="opttest" value="Solteiro(a)">Solteiro(a)</option>
+                                <option class="opttest" value="Casado(a)">Casado(a)</option>
+                                <option class="opttest" value="Separado(a)">Separado(a)</option>
+                                <option class="opttest" value="Divorciado(a)">Divorciado(a)</option>
+                                <option class="opttest" value="Viúvo(a)">Viúvo(a)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="CPF">CPF</label>
+                        <input id="CPF" type="number" name="cpf" placeholder="___.___.___-__" autocomplete="off" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RG">RG</label>
+                        <input id="RG" type="number" name="rg" placeholder="__.___.___-__" autocomplete="off" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="orgaoexp">Órgão Expedidor</label>
+                        <select list="orgaoexp" name="orgaoexpedidor" required>
+                                <option value="" selected>-- Marque uma Opção --</option>
+                                <option value="SSP">SSP</option>
+                                <option value="POLÍCIA FEDERAL">POLÍCIA FEDERAL</option>
+                                <option value="DETRAN">DETRAN</option>
+                                <option value="CARTÓRIO CIVIL">CARTÓRIO CIVIL</option>
+                                <option value="CRAS">CRAS</option>
+                                <option value="DIC">DIC</option>
+                                <option value="OUTROS">OUTROS</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu Email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">CEP</label>
+                        <input id="CEP" type="number" name="cep" placeholder="_____-___" autocomplete="none" required>
+                    </div>
+
+                </div>
+
+                <div class="models-inputs">
+                    <div class="models-title">
+                        <h6>Modelo de Sites</h6>
+                    </div>
+                    <fieldset class="models-group" name="modelo-de-site">
+                        <div class="models-input">
+                            <input type="radio" id="landingpage" name="modelo" value="Landing-Page" required>
+                            <label for="landingpage">Landing Page</label>
+                        </div>
+
+                        <div class="models-input">
+                            <input type="radio" id="dropshipping" name="modelo" value="Dropshipping" required>
+                            <label for="dropshipping">Dropshipping</label>
+                        </div>
+
+                        <div class="models-input">
+                            <input type="radio" id="infoproduct" name="modelo" value="Loja-de-Infroproduto" required>
+                            <label for="infoproduct">Loja de Infoproduto</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit"><a href="thanks.html">Enviar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/JS/scrypt.js"></script>
+    <script>
+        new FormMask(document.querySelector("#CPF"), "___.___.___-__", "_", [".", "-"])
+        new FormMask(document.querySelector("#RG"), "__.___.___-__", "_", [".", "-"])
+        new FormMask(document.querySelector("#CEP"), "_____-___", "_", [".", "-"])
+    </script>
+</body>
+</html>
