@@ -4,9 +4,9 @@ Projeto para estudos de APIs Rest e Banco de Dados PostgreSQL.
 
 ## Sumário
 
-- [Sobre](#📲-sobre)
-- [Tecnologias Utilizadas](#📝-tecnologias-utilizadas)
-- [Como Rodar o Projeto](#📍-como-rodar-o-projeto)
+- [Sobre](#sobre)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Rodar o Projeto](#como-rodar-o-projeto)
 
 ## 📲 Sobre
 
