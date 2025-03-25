@@ -10,7 +10,7 @@ Projeto para estudos de APIs Rest e Banco de Dados PostgreSQL.
 
 ## 📲 Sobre
 
-O Web Forms ele pega os inputs do usuário e envia para o Banco de Dados. Onde em breve farei melhoras de tecnologias como o uso de React no front e melhorias de perfomace. E também o deploy do formulário.
+O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em breve farei melhoras de tecnologias como o uso de React no front e melhorias de lógica e perfomace. E também o deploy do formulário.
 
 ## 📝 Tecnologias Utilizadas
 
