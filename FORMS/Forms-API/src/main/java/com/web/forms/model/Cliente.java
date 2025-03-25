@@ -13,7 +13,7 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String nome;
 
     private String estadocivil;
 
@@ -67,10 +67,10 @@ public class Cliente {
 
 
     public String getName(){
-        return name;
+        return nome;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setName(String nome){
+        this.nome = nome;
     }
 
     public String getEstadocivil(){
