@@ -1,18 +1,18 @@
-💻 FORMULÁRIO WEB 
+# 💻 FORMULÁRIO WEB 
 
 Projeto para estudos de APIs Rest e Banco de Dados PostgreSQL. 
 
 ## Sumário
 
-- [Sobre](#sobre)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Rodar o Projeto](#como-rodar-o-projeto)
+- [Sobre](#📲-sobre)
+- [Tecnologias Utilizadas](#📝-tecnologias-utilizadas)
+- [Como Rodar o Projeto](#📍-como-rodar-o-projeto)
 
-📲 ##Sobre
+## 📲 Sobre
 
 O Web Forms ele pega os inputs do usuário e envia para o Banco de Dados. Onde em breve farei melhoras de tecnologias como o uso de React no front e melhorias de perfomace. E também o deploy do formulário.
 
-📝 ##Tecnologias Utilizadas
+## 📝 Tecnologias Utilizadas
 
 - **Java 17**
 - **Spring Boot 3.4.4**
@@ -23,13 +23,14 @@ O Web Forms ele pega os inputs do usuário e envia para o Banco de Dados. Onde e
 - **CSS**
 - **JavaScript**
 
-📍 ##Como Rodar o Projeto
+## 📍 Como Rodar o Projeto
 
 ### Pré-requisitos
 
 - [Java 17 ou superior](https://adoptopenjdk.net/)
-- [Maven](https://maven.apache.org/)
+- [SPRING BOOT](https://start.spring.io/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [VS CODE](https://code.visualstudio.com/)
 
 ### Configuração
 
