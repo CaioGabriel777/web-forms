@@ -27,7 +27,7 @@ O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em br
 
 ### Pré-requisitos
 
-- [Java 17 ou superior](https://adoptopenjdk.net/)
+- [Java 17](https://adoptopenjdk.net/)
 - [SPRING BOOT](https://start.spring.io/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [VS CODE](https://code.visualstudio.com/)
