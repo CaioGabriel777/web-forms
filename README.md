@@ -32,7 +32,7 @@ O Web Forms ele pega os inputs do usuário e envia para o Banco de Dados. Onde e
 - [PostgreSQL](https://www.postgresql.org/)
 - [VS CODE](https://code.visualstudio.com/)
 
-### Configuração
+### Passo a passo 
 
 1. Utilize 2 servidores locais:
    Utilizei o VS CODE com o Live Server para o Front-end com porta padrão "localhost:5500".
