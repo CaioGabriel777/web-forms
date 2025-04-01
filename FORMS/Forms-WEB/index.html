@@ -14,8 +14,8 @@
             <img src="Assets/img/undraw_forms_re_pkrt.svg" alt="Imagem Ilustrativa Formulário">
         </div>
         <div class="form">
-            <!--AÇÃO BACKEND-->
-            <form action="http://localhost:8080/api/cliente" method="POST">
+
+            <form id="myForms">
                 <div class="form-header">
                     <div class="title">
                         <h1>Preencha o Formulário</h1>
@@ -30,7 +30,7 @@
 
                     <div class="input-box">
                         <label for="estadocivil">Estado Civil</label>
-                        <select list="estadocivil" name="estadocivil" required>     
+                        <select list="estadocivil" name="estadocivil" id="estadocivil" required>     
                                 <option class="opttest" value="" selected>-- Marque uma Opção --</option>
                                 <option class="opttest" value="Solteiro(a)">Solteiro(a)</option>
                                 <option class="opttest" value="Casado(a)">Casado(a)</option>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button type="submit"><a href="thanks.html">Enviar</a></button>
+                    <button type="submit"><a href="#">Enviar</a></button>
                 </div>
             </form>
         </div>

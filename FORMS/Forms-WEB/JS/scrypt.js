@@ -197,3 +197,51 @@ class FormMask {
 }
 
 //#endregion
+
+//#region ENVIAR FORMULÁRIO PARA API
+document.getElementById('myForms').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value; 
+    const estadocivil = document.getElementById('estadocivil').value; 
+    const cpf = document.getElementById('CPF').value;
+    const rg = document.getElementById('RG').value;
+    const orgaoexpedidor = document.getElementById('orgaoexpedidor').value;
+    const email = document.getElementById('email').value;
+    const cep = document.getElementById('CEP').value; 
+    const modelo = document.querySelector('input[name="modelo"]:checked');
+
+    const dados = {
+        Nome: nome,
+        EstadoCivil: estadocivil, 
+        CPF: cpf,
+        RG: rg,
+        OrgaoExpedidor: orgaoexpedidor,
+        Email: email, 
+        CEP: cep, 
+        Modelo: modelo.value
+    };
+
+    console.log(dados);
+
+    fetch('http://localhost:8080/api/cliente', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados)
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        console.log('Resposta:', data)
+        window.location.href = 'thanks.html';
+    })
+    .catch((error) => {
+        
+        console.error('Erro:', error);
+        window.location.href = 'erro.html'; 
+    });
+
+});
+//#endregion
