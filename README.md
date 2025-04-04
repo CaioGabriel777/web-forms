@@ -1,6 +1,6 @@
 # 💻 FORMULÁRIO WEB 
 
-Projeto para estudos de APIs Rest e Banco de Dados PostgreSQL. 
+Projeto para estudos de REST APIs e Banco de Dados PostgreSQL. 
 
 ## Sumário
 
@@ -17,7 +17,6 @@ O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em br
 - **Java 17**
 - **Spring Boot 3.4.4**
 - **PostgreSQL 17**
-- **Thymeleaf**
 - **Maven**
 - **HTML**
 - **CSS**
@@ -25,20 +24,7 @@ O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em br
 
 ## 📍 Como Rodar o Projeto
 
-### Pré-requisitos
-
-- [Java 17](https://adoptopenjdk.net/)
-- [SPRING BOOT](https://start.spring.io/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [VS CODE](https://code.visualstudio.com/)
-
 ### Passo a passo 
 
-1. Utilize 2 servidores locais:
-   Utilizei o VS CODE com o Live Server para o Front-end com porta padrão "localhost:5500".
-   Depois rodei a API com porta padrão "localhost:8080".
+1. Ainda será feito o deploy do projeto!⚠️
 
-2. Baixe o PostgreSQL e crie um servidor com o mesmo nome que está na API.
-   O nome do servidor está localizado no "application.properties" na API.
-
-3. Com tudo ligado, o projeto já estará rodando! 
