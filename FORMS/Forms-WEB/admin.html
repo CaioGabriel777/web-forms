@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/admStyle.css">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container">
+        <header class="admHeader">
+            <h1>Página de Administrador</h1>
+            <p>Gerencie aqui seus clientes</p>
+        </header>
+        <div class="input-group" id="myInputs">
+            <div class="input-box">
+                <label for="NOME">Buscar Cliente</label>
+                <input id="nomeCliente" type="text" name="nomeCliente" placeholder="Digite o Nome do Cliente" autocomplete="none" required>
+                <button class="btnAdicionar" onclick="buscarClientes()">Buscar</button>
+            </div>
+        </div>
+
+        <!-- Área para exibir a lista de clientes -->
+        <div id="clientes-lista">
+            <div id="listaClientes">
+                <h2>Clientes Cadastrados:</h2>
+                <table id="tabelaClientes">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Modelo</th>
+                            <th>CPF</th>
+                            <th>RG</th>
+                            <th>Orgão Exp.</th>
+                            <th>CEP</th>
+                            <th>Estado Civil</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabelaClientes">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/JS/adm.js"></script>
+</body>
+</html>

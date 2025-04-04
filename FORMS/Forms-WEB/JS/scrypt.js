@@ -203,28 +203,28 @@ document.getElementById('myForms').addEventListener('submit', function(event){
     event.preventDefault();
 
     const nome = document.getElementById('nome').value; 
-    const estadocivil = document.getElementById('estadocivil').value; 
+    const estadocivil = document.getElementById('estadoCivil').value;  
     const cpf = document.getElementById('CPF').value;
     const rg = document.getElementById('RG').value;
-    const orgaoexpedidor = document.getElementById('orgaoexpedidor').value;
+    const orgaoexpedidor = document.getElementById('orgaoExpedidor').value;
     const email = document.getElementById('email').value;
     const cep = document.getElementById('CEP').value; 
     const modelo = document.querySelector('input[name="modelo"]:checked');
 
     const dados = {
-        Nome: nome,
-        EstadoCivil: estadocivil, 
-        CPF: cpf,
-        RG: rg,
-        OrgaoExpedidor: orgaoexpedidor,
-        Email: email, 
-        CEP: cep, 
-        Modelo: modelo.value
+        nome: nome,
+        estadoCivil: estadocivil, 
+        cpf: cpf,
+        rg: rg,
+        orgaoExpedidor: orgaoexpedidor,
+        email: email, 
+        cep: cep, 
+        modelo: modelo.value
     };
 
     console.log(dados);
 
-    fetch('http://localhost:8080/api/cliente', {
+    fetch('http://localhost:8080/cliente/enviar', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json',

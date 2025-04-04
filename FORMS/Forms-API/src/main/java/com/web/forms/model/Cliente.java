@@ -15,13 +15,13 @@ public class Cliente {
 
     private String nome;
 
-    private String estadocivil;
+    private String estadoCivil;
 
     private String cpf;
 
     private String rg;
 
-    private String orgaoexpedidor;
+    private String orgaoExpedidor;
 
     private String email;
 
@@ -34,11 +34,11 @@ public class Cliente {
     //GETTERS E SETTERS
 
     public String getOrgaoexpedidor() {
-        return orgaoexpedidor;
+        return orgaoExpedidor;
     }
 
     public void setOrgaoexpedidor(String orgaoexpedidor) {
-        this.orgaoexpedidor = orgaoexpedidor;
+        this.orgaoExpedidor = orgaoexpedidor;
     }
 
     public String getEmail() {
@@ -66,18 +66,18 @@ public class Cliente {
     }
 
 
-    public String getName(){
+    public String getNome(){
         return nome;
     }
-    public void setName(String nome){
+    public void setNome(String nome){
         this.nome = nome;
     }
 
     public String getEstadocivil(){
-        return estadocivil;
+        return estadoCivil;
     }
     public void setEstadocivil(String estadocivil){
-        this.estadocivil = estadocivil;
+        this.estadoCivil = estadocivil;
     }
 
     public String getCpf(){

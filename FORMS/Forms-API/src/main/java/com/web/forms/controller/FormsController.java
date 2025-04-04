@@ -9,30 +9,40 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*")
-@Controller
-public class FormsController {
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
-    @Autowired
-    private ClienteRepository clienteRepository;
+@CrossOrigin(origins = "*")
+@RestController
+@RequestMapping("/cliente")
+public class FormsController {
 
     @Autowired
     private ClientesService clientesService;
 
-    @PostMapping("/api/cliente")
-    public String adicionar(
-            @RequestParam String name,
-            @RequestParam String estadocivil,
-            @RequestParam String cpf,
-            @RequestParam String rg,
-            @RequestParam String orgaoexpedidor,
-            @RequestParam String email,
-            @RequestParam String cep,
-            @RequestParam String modelo){
+    @GetMapping("/todos")
+    public ResponseEntity<List<Cliente>> buscarTodos(){
+        List<Cliente> cliente = clientesService.buscarTodos();
+        return ResponseEntity.ok(cliente);
+    }
 
-        Cliente cliente = clientesService.salvar(name, estadocivil, cpf, rg, orgaoexpedidor, email, cep, modelo);
+    @GetMapping("/buscar/{nome}")
+    public ResponseEntity<List<Cliente>> buscarPorNome(@PathVariable String nome){
+        List<Cliente> cliente = clientesService.buscarPorNome(nome);
+        return ResponseEntity.ok(cliente);
+    }
 
-        return "redirect:http://localhost:5500/thanks.html";
+    @PostMapping("/enviar")
+    public ResponseEntity<String> adicionar(@RequestBody Cliente dados){
+
+        try{
+            Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadocivil(), dados.getCpf(), dados.getRg(), dados.getOrgaoexpedidor(),
+                    dados.getEmail(), dados.getCep(), dados.getModelo());
+            return ResponseEntity.ok("Dados Salvo com Sucesso");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
