@@ -1,17 +1,13 @@
 package com.web.forms.controller;
 
 import com.web.forms.model.Cliente;
-import com.web.forms.repository.ClienteRepository;
 import com.web.forms.services.ClientesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -37,11 +33,11 @@ public class FormsController {
     public ResponseEntity<String> adicionar(@RequestBody Cliente dados){
 
         try{
-            Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadocivil(), dados.getCpf(), dados.getRg(), dados.getOrgaoexpedidor(),
+            Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadoCivil(), dados.getCpf(), dados.getRg(), dados.getOrgaoExpedidor(),
                     dados.getEmail(), dados.getCep(), dados.getModelo());
-            return ResponseEntity.ok("Dados Salvo com Sucesso");
+            return ResponseEntity.status(HttpStatus.CREATED).body("Dados Enviados com Sucesso!");
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao salvar os dados.");
         }
 
     }

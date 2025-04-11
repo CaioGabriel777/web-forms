@@ -232,16 +232,22 @@ document.getElementById('myForms').addEventListener('submit', function(event){
         body: JSON.stringify(dados)
     })
 
-    .then(response => response.json())
+    .then(response => {
+        console.log("Status da resposta:", response.status);
+        if (!response.ok) {
+            throw new Error("Erro HTTP: " + response.status);
+        }
+        return response.text(); 
+    })
     .then(data => {
-        console.log('Resposta:', data)
+        console.log("Resposta:", data);
         window.location.href = 'thanks.html';
     })
-    .catch((error) => {
-        
-        console.error('Erro:', error);
-        window.location.href = 'erro.html'; 
+    .catch(error => {
+        console.error("Erro detectado:", error.message);
+        window.location.href = 'erro.html';
     });
+    
 
 });
 //#endregion

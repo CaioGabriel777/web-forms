@@ -1,9 +1,6 @@
 package com.web.forms.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -11,33 +8,42 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cl_Id")
     private Long id;
 
+    @Column(name = "cl_Nome")
     private String nome;
 
+    @Column(name = "cl_Estado_Civil")
     private String estadoCivil;
 
+    @Column(name = "cl_CPF")
     private String cpf;
 
+    @Column(name = "cl_RG")
     private String rg;
 
+    @Column(name = "cl_Orgao_Expedidor")
     private String orgaoExpedidor;
 
+    @Column(name = "cl_Email")
     private String email;
 
+    @Column(name = "cl_CEP")
     private String cep;
 
+    @Column(name = "cl_Modelo_Site")
     private String modelo;
 
 
 
     //GETTERS E SETTERS
 
-    public String getOrgaoexpedidor() {
+    public String getOrgaoExpedidor() {
         return orgaoExpedidor;
     }
 
-    public void setOrgaoexpedidor(String orgaoexpedidor) {
+    public void setOrgaoExpedidor(String orgaoexpedidor) {
         this.orgaoExpedidor = orgaoexpedidor;
     }
 
@@ -73,10 +79,10 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getEstadocivil(){
+    public String getEstadoCivil(){
         return estadoCivil;
     }
-    public void setEstadocivil(String estadocivil){
+    public void setEstadoCivil(String estadocivil){
         this.estadoCivil = estadocivil;
     }
 
