@@ -10,13 +10,14 @@
     <div class="container">
         <header class="admHeader">
             <h1>Página de Administrador</h1>
-            <p>Gerencie aqui seus clientes</p>
+            <p>Gerencie Aqui Seus Clientes</p>
         </header>
         <div class="input-group" id="myInputs">
             <div class="input-box">
                 <label for="NOME">Buscar Cliente</label>
                 <input id="nomeCliente" type="text" name="nomeCliente" placeholder="Digite o Nome do Cliente" autocomplete="none" required>
                 <button class="btnAdicionar" onclick="buscarClientes()">Buscar</button>
+                <button id="limparBusca" onclick="limparBusca()" style="display: none; background-color: transparent; border: none; font-size: 20px; color: red; cursor: pointer;">✖</button>
             </div>
         </div>
 
@@ -29,7 +30,7 @@
                         <tr>
                             <th>Nome</th>
                             <th>Email</th>
-                            <th>Modelo</th>
+                            <th>Modelo de Site</th>
                             <th>CPF</th>
                             <th>RG</th>
                             <th>Orgão Exp.</th>

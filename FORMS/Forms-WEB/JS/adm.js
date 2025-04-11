@@ -9,18 +9,25 @@ async function buscarClientes() {
     try {
         const response = await fetch(`http://localhost:8080/cliente/buscar/${encodeURIComponent(nomeCliente)}`);
         const clientes = await response.json();
+        document.getElementById("limparBusca").style.display = "inline";
 
         if (clientes.length === 0) {
             alert("Nenhum cliente encontrado.");
             return;
         }
 
-        exibirClientes(clientes); // Atualiza a tabela com os dados recebidos
+        exibirClientes(clientes); 
 
     } catch (error) {
         console.error("Erro ao buscar clientes:", error);
         alert("Erro ao buscar clientes.");
     }
+}
+
+function limparBusca() {
+    document.getElementById("nomeCliente").value = "";
+    document.getElementById("limparBusca").style.display = "none"; 
+    buscarTodosClientes(); 
 }
 
 async function buscarTodosClientes() {

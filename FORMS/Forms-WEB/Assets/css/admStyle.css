@@ -11,7 +11,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #fdfbff, #e7d5fb, #d8b4fe);
+    /*background: linear-gradient(to right, #fdfbff, #e7d5fb, #d8b4fe);*/
+    background-color: #e7d4fc;
     color: #000000c0;
     flex-direction: column;
 }
@@ -21,7 +22,8 @@ body{
     height: 80vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.212);
 }
 
 .admHeader{
