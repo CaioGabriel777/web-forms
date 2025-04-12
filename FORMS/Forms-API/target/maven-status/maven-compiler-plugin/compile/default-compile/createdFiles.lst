@@ -1,0 +1,11 @@
+com\web\forms\services\ClientesService.class
+com\web\forms\controller\FormsController.class
+com\web\forms\exception\GlobalExceptionHandler.class
+com\web\forms\entity\Cliente.class
+com\web\forms\exception\MensagemException.class
+com\web\forms\dto\ClienteDTO.class
+com\web\forms\services\ClienteValidationService.class
+com\web\forms\dto\AdminDTO.class
+com\web\forms\entity\Admin.class
+com\web\forms\repository\ClienteRepository.class
+com\web\forms\WebFormsApplication.class

@@ -1,0 +1,11 @@
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\controller\FormsController.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\dto\AdminDTO.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\dto\ClienteDTO.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\entity\Admin.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\entity\Cliente.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\exception\GlobalExceptionHandler.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\exception\MensagemException.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\repository\ClienteRepository.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\services\ClientesService.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\services\ClienteValidationService.java
+C:\Users\Caio Gabriel\Documents\Eu\MyProjects\JavaProjects\web-forms\FORMS\Forms-API\src\main\java\com\web\forms\WebFormsApplication.java
