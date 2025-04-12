@@ -7,7 +7,7 @@ async function buscarClientes() {
     }
 
     try {
-        const response = await fetch(`http://localhost:8080/cliente/buscar/${encodeURIComponent(nomeCliente)}`);
+        const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/buscar/${encodeURIComponent(nomeCliente)}`);
         const clientes = await response.json();
         document.getElementById("limparBusca").style.display = "inline";
 
@@ -32,7 +32,7 @@ function limparBusca() {
 
 async function buscarTodosClientes() {
     try {
-        const response = await fetch("http://localhost:8080/cliente/todos");
+        const response = await fetch("https://web-forms-t5o7.onrender.com/cliente/todos");
         const clientes = await response.json();
         exibirClientes(clientes);
     } catch (error) {

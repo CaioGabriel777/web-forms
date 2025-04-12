@@ -224,7 +224,7 @@ document.getElementById('myForms').addEventListener('submit', function(event){
 
     console.log(dados);
 
-    fetch('http://localhost:8080/cliente/enviar', {
+    fetch('https://web-forms-t5o7.onrender.com/cliente/enviar', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json',
