@@ -1,6 +1,6 @@
 package com.web.forms.controller;
 
-import com.web.forms.model.Cliente;
+import com.web.forms.entity.Cliente;
 import com.web.forms.services.ClientesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

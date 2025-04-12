@@ -1,6 +1,6 @@
 package com.web.forms.repository;
 
-import com.web.forms.model.Cliente;
+import com.web.forms.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

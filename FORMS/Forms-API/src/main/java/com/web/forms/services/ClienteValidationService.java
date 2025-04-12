@@ -1,7 +1,7 @@
 package com.web.forms.services;
 
 import com.web.forms.exception.MensagemException;
-import com.web.forms.model.Cliente;
+import com.web.forms.entity.Cliente;
 import org.springframework.stereotype.Service;
 
 @Service

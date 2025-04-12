@@ -1,6 +1,6 @@
 package com.web.forms.services;
 
-import com.web.forms.model.Cliente;
+import com.web.forms.entity.Cliente;
 import com.web.forms.repository.ClienteRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
