@@ -1,4 +1,4 @@
-package com.web.forms.services;
+package com.web.forms.service;
 
 import com.web.forms.exception.MensagemException;
 import com.web.forms.entity.Cliente;

@@ -1,3 +1,6 @@
+if (!localStorage.getItem("usuarioAutenticado")) {
+    window.location.href = "/Login/login.html";
+  }
 async function buscarClientes() {
     const nomeCliente = document.getElementById("nomeCliente").value;
 
@@ -7,6 +10,10 @@ async function buscarClientes() {
     }
 
     try {
+        //!ambiente de desenvolvimento:
+        //const response = await fetch(`https://localhost:8080/cliente/buscar/${encodeURIComponent(nomeCliente)}`);
+
+        //!ambiente de produção:
         const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/buscar/${encodeURIComponent(nomeCliente)}`);
         const clientes = await response.json();
         document.getElementById("limparBusca").style.display = "inline";
@@ -32,6 +39,10 @@ function limparBusca() {
 
 async function buscarTodosClientes() {
     try {
+        //!ambiente de desenvolvimento:
+        //const response = await fetch("https://localhost:8080/cliente/todos");
+        
+        //!ambiente de produção:
         const response = await fetch("https://web-forms-t5o7.onrender.com/cliente/todos");
         const clientes = await response.json();
         exibirClientes(clientes);
