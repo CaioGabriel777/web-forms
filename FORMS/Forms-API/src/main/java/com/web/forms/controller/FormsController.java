@@ -33,7 +33,7 @@ public class FormsController {
     public ResponseEntity<String> adicionar(@RequestBody Cliente dados){
 
         try{
-            Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadoCivil(), dados.getCpf(), dados.getRg(), dados.getOrgaoExpedidor(),
+            Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadoCivil(), dados.getCpf(), dados.getRg(), /*dados.getOrgaoExpedidor(),*/
                     dados.getEmail(), dados.getCep(), dados.getModelo());
             return ResponseEntity.status(HttpStatus.CREATED).body("Dados Enviados com Sucesso!");
         } catch (Exception e) {

@@ -19,7 +19,7 @@ public class ClientesService {
     }
 
     @Transactional
-    public Cliente salvar(String nome, String estadoCivil, String cpf, String rg, String orgaoExpedidor, String email,
+    public Cliente salvar(String nome, String estadoCivil, String cpf, String rg, /*String orgaoExpedidor,*/ String email,
                           String cep, String modelo){
 
         Cliente cliente = new Cliente();
@@ -27,7 +27,7 @@ public class ClientesService {
         cliente.setEstadoCivil(estadoCivil);
         cliente.setCpf(cpf);
         cliente.setRg(rg);
-        cliente.setOrgaoExpedidor(orgaoExpedidor);
+        //cliente.setOrgaoExpedidor(orgaoExpedidor);
         cliente.setEmail(email);
         cliente.setCep(cep);
         cliente.setModelo(modelo);

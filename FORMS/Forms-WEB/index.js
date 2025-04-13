@@ -216,7 +216,7 @@ document.getElementById('myForms').addEventListener('submit', function(event){
         estadoCivil: estadocivil, 
         cpf: cpf,
         rg: rg,
-        orgaoExpedidor: orgaoexpedidor,
+        //orgaoExpedidor: orgaoexpedidor,
         email: email, 
         cep: cep, 
         modelo: modelo.value
