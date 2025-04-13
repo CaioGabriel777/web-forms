@@ -206,7 +206,7 @@ document.getElementById('myForms').addEventListener('submit', function(event){
     const estadocivil = document.getElementById('estadoCivil').value;  
     const cpf = document.getElementById('CPF').value;
     const rg = document.getElementById('RG').value;
-    const orgaoexpedidor = document.getElementById('orgaoExpedidor').value;
+    //const orgaoexpedidor = document.getElementById('orgaoExpedidor').value;
     const email = document.getElementById('email').value;
     const cep = document.getElementById('CEP').value; 
     const modelo = document.querySelector('input[name="modelo"]:checked');
