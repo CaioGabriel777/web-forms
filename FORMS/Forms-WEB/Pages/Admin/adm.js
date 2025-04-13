@@ -78,7 +78,6 @@ function exibirClientes(clientes) {
             <td>${cliente.modelo}</td>
             <td>${cliente.cpf}</td>
             <td>${cliente.rg}</td>
-            <td>${cliente.orgaoExpedidor}</td>
             <td>${cliente.cep}</td>
             <td>${cliente.estadoCivil}</td>
         `;
