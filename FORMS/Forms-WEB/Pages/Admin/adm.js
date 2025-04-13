@@ -1,6 +1,10 @@
-if (!localStorage.getItem("usuarioAutenticado")) {
-    window.location.href = "/Login/login.html";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+    const logado = localStorage.getItem("logado");
+
+    if (logado !== "true") {
+        window.location.href = "/pages/login/login.html";
+    }
+});
 async function buscarClientes() {
     const nomeCliente = document.getElementById("nomeCliente").value;
 

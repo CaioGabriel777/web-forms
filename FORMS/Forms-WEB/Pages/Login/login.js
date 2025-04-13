@@ -23,12 +23,15 @@ async function fazerLogin() {
         });
 
         if (response.ok) {
-            window.location.href = "/Pages/Admin/admin.html";
+            if (response.ok) {
+                localStorage.setItem("logado", "true"); // ou salvar token se tiver auth de verdade
+                window.location.href = "/pages/admin/admin.html";
+            }
         } else {
             alert("Email ou senha inválidos.");
         }
     } catch (error) {
         console.error("Erro detectado:", error.message);
-        window.location.href = '/Pages/Error/erro.html';
+        window.location.href = '/pages/error/erro.html';
     }
 }

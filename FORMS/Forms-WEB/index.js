@@ -240,11 +240,11 @@ document.getElementById('myForms').addEventListener('submit', function(event){
     })
     .then(data => {
         console.log("Resposta:", data);
-        window.location.href = '/Pages/Thanks/thanks.html';
+        window.location.href = '/pages/thanks/thanks.html';
     })
     .catch(error => {
         console.error("Erro detectado:", error.message);
-        window.location.href = '/Pages/Error/erro.html';
+        window.location.href = '/pages/error/erro.html';
     });
     
 
