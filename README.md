@@ -6,11 +6,13 @@ Projeto para estudos de REST APIs e Banco de Dados PostgreSQL.
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Rodar o Projeto](#como-rodar-o-projeto)
+- [Como Rodar o Projeto](#como-ver-o-projeto)
 
 ## 📲 Sobre
 
-O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em breve farei melhoras de tecnologias como o uso de React no front e melhorias de lógica e perfomace. E também o deploy do formulário.
+O Web Forms se resume em um formulário online feito com HTML, CSS E JS. Os dados do formulário são enviados para um Banco de Dados PostgreSQL através de uma Rest API com Spring Boot.
+Melhorias, principalmente no front-end serão feitas, como: responsividade para APPs mobile, e também o projeto será em Next.JS.
+No back-end será feita a validação dos dados do usuário, como validão de email, cpf e rg.
 
 ## 📝 Tecnologias Utilizadas
 
@@ -22,9 +24,11 @@ O Web Forms pega os inputs do usuário e envia para o Banco de Dados. Onde em br
 - **CSS**
 - **JavaScript**
 
-## 📍 Como Rodar o Projeto
+## 📍 Como Ver o Projeto
 
-### Passo a passo 
+1. Basta acessar o link abaixo e testar:
+* https://web-forms-br.netlify.app/
 
-1. Ainda será feito o deploy do projeto!⚠️
-
+Página de Admin
+* https://web-forms-br.netlify.app/pages/admin/admin.html
+  
