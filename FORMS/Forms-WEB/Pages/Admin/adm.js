@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "/pages/login/login.html";
     }
 });
+
 async function buscarClientes() {
     const nomeCliente = document.getElementById("nomeCliente").value;
 
@@ -41,7 +42,16 @@ function limparBusca() {
     buscarTodosClientes(); 
 }
 
+function mostrarLoading() {
+    document.getElementById("loadingOverlay").style.display = "flex";
+}
+
+function esconderLoading() {
+    document.getElementById("loadingOverlay").style.display = "none";
+}
+
 async function buscarTodosClientes() {
+    mostrarLoading();
     try {
         //!ambiente de desenvolvimento:
         //const response = await fetch("https://localhost:8080/cliente/todos");
@@ -52,6 +62,8 @@ async function buscarTodosClientes() {
         exibirClientes(clientes);
     } catch (error) {
         console.error("Erro ao buscar todos os clientes:", error);
+    } finally {
+        esconderLoading();
     }
 }
 
