@@ -94,7 +94,7 @@ function exibirClientes(clientes) {
             <td>${cliente.cep}</td>
             <td>${cliente.estadoCivil}</td>
             <td><button onclick="excluirCliente(${cliente.id})" 
-                 style="background:none;border:none;font-size:18px;color:red;cursor:pointer;">❌</button>}</td>
+                 style="background:none;border:none;font-size:18px;color:red;cursor:pointer;">❌</button></td>
         `;
 
         corpoTabela.appendChild(linha);
@@ -105,7 +105,7 @@ async function excluirCliente(id) {
     if (!confirm("Tem certeza que deseja excluir este cliente?")) return;
 
     try {
-        const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/excluir/${id}`, {
+        const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/deletar/${id}`, {
             method: "DELETE"
         });
 
