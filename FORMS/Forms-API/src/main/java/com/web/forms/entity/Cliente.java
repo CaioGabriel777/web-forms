@@ -37,6 +37,7 @@ public class Cliente {
 
 
 
+
     /**GETTERS E SETTERS**/
 
     /*public String getOrgaoExpedidor() {
@@ -46,6 +47,14 @@ public class Cliente {
     public void setOrgaoExpedidor(String orgaoexpedidor) {
         this.orgaoExpedidor = orgaoexpedidor;
     }*/
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getEmail() {
         return email;

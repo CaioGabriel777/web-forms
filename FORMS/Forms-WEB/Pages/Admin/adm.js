@@ -73,6 +73,7 @@ function exibirClientes(clientes) {
         const linha = document.createElement("tr");
 
         linha.innerHTML = `
+            <td>${cliente.id}</td>
             <td>${cliente.nome}</td>
             <td>${cliente.email}</td>
             <td>${cliente.modelo}</td>

@@ -42,4 +42,8 @@ public class ClientesService {
     public List<Cliente> buscarTodos(){
         return clienteRepository.findAll();
     }
+
+    /*public Cliente deletar(){
+        return clienteRepository.delete(cliente);
+    }*/
 }
