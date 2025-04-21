@@ -18,7 +18,7 @@ No back-end será feita a validação dos dados do usuário, como validão de em
 
 - **Java 17**
 - **Spring Boot 3.4.4**
-- **PostgreSQL 17**
+- **PostgreSQL 16**
 - **Maven**
 - **HTML**
 - **CSS**
