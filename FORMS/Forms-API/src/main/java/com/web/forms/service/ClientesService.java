@@ -43,7 +43,7 @@ public class ClientesService {
         return clienteRepository.findAll();
     }
 
-    /*public Cliente deletar(){
-        return clienteRepository.delete(cliente);
-    }*/
+    public void deletar(Long id){
+        clienteRepository.deleteById(id);
+    }
 }

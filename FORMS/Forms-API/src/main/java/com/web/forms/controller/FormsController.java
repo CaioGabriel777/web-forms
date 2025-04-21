@@ -42,8 +42,9 @@ public class FormsController {
 
     }
 
-    /*@DeleteMapping("/deletar")
-    public ResponseEntity<String> excluirCliente(){
-
-    }*/
+    @DeleteMapping("/deletar/{id}")
+    public ResponseEntity<String> excluirCliente(@PathVariable Long id){
+        clientesService.deletar(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Dados Excluídos com Sucesso!");
+    }
 }

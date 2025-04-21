@@ -81,10 +81,32 @@ function exibirClientes(clientes) {
             <td>${cliente.rg}</td>
             <td>${cliente.cep}</td>
             <td>${cliente.estadoCivil}</td>
+            <td>${<button onclick="excluirCliente(${cliente.id})" 
+                 style="background:none;border:none;font-size:18px;color:red;cursor:pointer;">❌</button>}</td>
         `;
 
         corpoTabela.appendChild(linha);
     });
+}
+
+async function excluirCliente(id) {
+    if (!confirm("Tem certeza que deseja excluir este cliente?")) return;
+
+    try {
+        const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/excluir/${id}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            alert("Cliente excluído com sucesso!");
+            buscarTodosClientes(); 
+        } else {
+            alert("Erro ao excluir cliente.");
+        }
+    } catch (error) {
+        console.error("Erro ao excluir cliente:", error);
+        alert("Erro ao excluir cliente.");
+    }
 }
 
 window.onload = () => {
