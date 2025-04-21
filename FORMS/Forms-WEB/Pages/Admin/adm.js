@@ -93,7 +93,7 @@ function exibirClientes(clientes) {
             <td>${cliente.rg}</td>
             <td>${cliente.cep}</td>
             <td>${cliente.estadoCivil}</td>
-            <td>${<button onclick="excluirCliente(${cliente.id})" 
+            <td><button onclick="excluirCliente(${cliente.id})" 
                  style="background:none;border:none;font-size:18px;color:red;cursor:pointer;">❌</button>}</td>
         `;
 
