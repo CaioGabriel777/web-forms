@@ -19,36 +19,36 @@ public class ClientesService {
     }
 
     @Transactional
-    public Cliente salvar(String nome, String estadoCivil, String cpf, String rg, /*String orgaoExpedidor,*/ String email,
-                          String cep, String modelo){
+    public Cliente salvar(String pNome, String pEstadoCivil, String pCpf, String pRg, /*String pOrgaoExpedidor,*/ String pEmail,
+                          String pCep, String pModelo){
 
         Cliente cliente = new Cliente();
-        for(char c : nome.toCharArray()){
+        for(char c : pNome.toCharArray()){
             if(Character.isDigit(c)){
                 throw new RuntimeException("Nome não pode ter números");
             }
         }
-        cliente.setNome(nome);
-        cliente.setEstadoCivil(estadoCivil);
-        cliente.setCpf(cpf);
-        cliente.setRg(rg);
-        //cliente.setOrgaoExpedidor(orgaoExpedidor);
-        cliente.setEmail(email);
-        cliente.setCep(cep);
-        cliente.setModelo(modelo);
+        cliente.setNome(pNome);
+        cliente.setEstadoCivil(pEstadoCivil);
+        cliente.setCpf(pCpf);
+        cliente.setRg(pRg);
+        //cliente.setOrgaoExpedidor(pOrgaoExpedidor);
+        cliente.setEmail(pEmail);
+        cliente.setCep(pCep);
+        cliente.setModelo(pModelo);
 
         return clienteRepository.save(cliente);
     }
 
-    public List<Cliente> buscarPorNome(String nome){
-        return clienteRepository.findByNomeContainingIgnoreCase(nome);
+    public List<Cliente> buscarPorNome(String pNome){
+        return clienteRepository.findByNomeContainingIgnoreCase(pNome);
     }
 
     public List<Cliente> buscarTodos(){
         return clienteRepository.findAll();
     }
 
-    public void deletar(Long id){
-        clienteRepository.deleteById(id);
+    public void deletar(Long pId){
+        clienteRepository.deleteById(pId);
     }
 }

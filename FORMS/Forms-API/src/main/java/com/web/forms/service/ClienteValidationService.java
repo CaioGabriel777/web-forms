@@ -7,25 +7,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClienteValidationService {
 
-    public void validarFormulario(Cliente cliente) {
+    public void validarFormulario(Cliente pCliente) {
 
-        if (cliente.getNome() == null || cliente.getNome().trim().isEmpty()) {
+        if (pCliente.getNome() == null || pCliente.getNome().trim().isEmpty()) {
             throw new MensagemException("O campo 'Nome' é obrigatório. ");
         }
 
-        if (cliente.getRg() == null || cliente.getRg().trim().isEmpty()) {
+        if (pCliente.getRg() == null || pCliente.getRg().trim().isEmpty()) {
             throw new MensagemException("O campo 'RG' é obrigatório");
         }
 
-        if (cliente.getEmail() == null || cliente.getEmail().trim().isEmpty()) {
+        if (pCliente.getEmail() == null || pCliente.getEmail().trim().isEmpty()) {
             throw new MensagemException("O campo 'Email' é obrigatório");
         }
 
-        if (cliente.getCpf() == null || cliente.getCpf().trim().isEmpty()) {
+        if (pCliente.getCpf() == null || pCliente.getCpf().trim().isEmpty()) {
             throw new MensagemException("O campo 'CPF' é obrigatório");
         }
 
-        if (cliente.getCep() == null || cliente.getCep().trim().isEmpty()) {
+        if (pCliente.getCep() == null || pCliente.getCep().trim().isEmpty()) {
             throw new MensagemException("O campo 'CEP' é obrigatório");
 
         }

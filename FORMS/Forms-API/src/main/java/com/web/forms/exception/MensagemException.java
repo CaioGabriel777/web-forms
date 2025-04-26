@@ -4,8 +4,8 @@ public class MensagemException extends RuntimeException{
 
     private String mensagem;
 
-    public MensagemException(String mensagem){
-        super(mensagem);
+    public MensagemException(String pMensagem){
+        super(pMensagem);
     }
 
 }

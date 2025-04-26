@@ -12,7 +12,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/cliente")
-public class FormsController {
+public class FormsController extends RuntimeException{
 
     @Autowired
     private ClientesService clientesService;
@@ -36,8 +36,8 @@ public class FormsController {
             Cliente cliente = clientesService.salvar(dados.getNome(), dados.getEstadoCivil(), dados.getCpf(), dados.getRg(), /*dados.getOrgaoExpedidor(),*/
                     dados.getEmail(), dados.getCep(), dados.getModelo());
             return ResponseEntity.status(HttpStatus.CREATED).body("Dados Enviados com Sucesso!");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao salvar os dados.");
+        } catch (Exception RuntimeException) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao salvar os dados.\n" + RuntimeException);
         }
 
     }
