@@ -23,6 +23,11 @@ public class ClientesService {
                           String cep, String modelo){
 
         Cliente cliente = new Cliente();
+        for(char c : nome.toCharArray()){
+            if(Character.isDigit(c)){
+                throw new RuntimeException("Nome não pode ter números");
+            }
+        }
         cliente.setNome(nome);
         cliente.setEstadoCivil(estadoCivil);
         cliente.setCpf(cpf);
