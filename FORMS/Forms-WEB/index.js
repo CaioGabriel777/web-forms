@@ -206,7 +206,7 @@ document.getElementById('myForms').addEventListener('submit', function(event){
     const estadocivil = document.getElementById('estadoCivil').value;  
     const cpf = document.getElementById('CPF').value;
     const rg = document.getElementById('RG').value;
-    const orgaoexpedidor = document.getElementById('orgaoExpedidor').value;
+    //const orgaoexpedidor = document.getElementById('orgaoExpedidor').value;
     const email = document.getElementById('email').value;
     const cep = document.getElementById('CEP').value; 
     const modelo = document.querySelector('input[name="modelo"]:checked');
@@ -216,7 +216,7 @@ document.getElementById('myForms').addEventListener('submit', function(event){
         estadoCivil: estadocivil, 
         cpf: cpf,
         rg: rg,
-        orgaoExpedidor: orgaoexpedidor,
+        //orgaoExpedidor: orgaoexpedidor,
         email: email, 
         cep: cep, 
         modelo: modelo.value
@@ -240,11 +240,11 @@ document.getElementById('myForms').addEventListener('submit', function(event){
     })
     .then(data => {
         console.log("Resposta:", data);
-        window.location.href = '/Pages/Thanks/thanks.html';
+        window.location.href = '/pages/thanks/thanks.html';
     })
     .catch(error => {
         console.error("Erro detectado:", error.message);
-        window.location.href = '/Pages/Error/erro.html';
+        window.location.href = '/pages/error/erro.html';
     });
     
 

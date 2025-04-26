@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/Pages/Admin/admStyle.css">
     <title>Admin</title>
 </head>
+<div id="loadingOverlay">
+    <div class="spinner"></div>
+</div>
 <body>
     <div class="container">
         <header class="admHeader">
@@ -28,14 +31,16 @@
                 <table id="tabelaClientes">
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Modelo de Site</th>
                             <th>CPF</th>
                             <th>RG</th>
-                            <th>Orgão Exp.</th>
+                            <!--<th>Orgão Exp.</th>-->
                             <th>CEP</th>
                             <th>Estado Civil</th>
+                            <th>Excluir</th>
                         </tr>
                     </thead>
                     <tbody id="corpoTabelaClientes">

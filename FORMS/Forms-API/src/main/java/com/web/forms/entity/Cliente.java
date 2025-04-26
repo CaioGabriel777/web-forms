@@ -23,8 +23,8 @@ public class Cliente {
     @Column(name = "cl_RG")
     private String rg;
 
-    @Column(name = "cl_Orgao_Expedidor")
-    private String orgaoExpedidor;
+    //@Column(name = "cl_Orgao_Expedidor")
+    //private String orgaoExpedidor;
 
     @Column(name = "cl_Email")
     private String email;
@@ -37,14 +37,23 @@ public class Cliente {
 
 
 
+
     /**GETTERS E SETTERS**/
 
-    public String getOrgaoExpedidor() {
+    /*public String getOrgaoExpedidor() {
         return orgaoExpedidor;
     }
 
     public void setOrgaoExpedidor(String orgaoexpedidor) {
         this.orgaoExpedidor = orgaoexpedidor;
+    }*/
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEmail() {

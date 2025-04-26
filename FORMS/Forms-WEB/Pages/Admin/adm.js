@@ -1,6 +1,11 @@
-if (!localStorage.getItem("usuarioAutenticado")) {
-    window.location.href = "/Login/login.html";
-  }
+document.addEventListener("DOMContentLoaded", () => {
+    const logado = localStorage.getItem("logado");
+
+    if (logado !== "true") {
+        window.location.href = "/pages/login/login.html";
+    }
+});
+
 async function buscarClientes() {
     const nomeCliente = document.getElementById("nomeCliente").value;
 
@@ -37,7 +42,16 @@ function limparBusca() {
     buscarTodosClientes(); 
 }
 
+function mostrarLoading() {
+    document.getElementById("loadingOverlay").style.display = "flex";
+}
+
+function esconderLoading() {
+    document.getElementById("loadingOverlay").style.display = "none";
+}
+
 async function buscarTodosClientes() {
+    mostrarLoading();
     try {
         //!ambiente de desenvolvimento:
         //const response = await fetch("https://localhost:8080/cliente/todos");
@@ -48,6 +62,8 @@ async function buscarTodosClientes() {
         exibirClientes(clientes);
     } catch (error) {
         console.error("Erro ao buscar todos os clientes:", error);
+    } finally {
+        esconderLoading();
     }
 }
 
@@ -69,18 +85,40 @@ function exibirClientes(clientes) {
         const linha = document.createElement("tr");
 
         linha.innerHTML = `
+            <td>${cliente.id}</td>
             <td>${cliente.nome}</td>
             <td>${cliente.email}</td>
             <td>${cliente.modelo}</td>
             <td>${cliente.cpf}</td>
             <td>${cliente.rg}</td>
-            <td>${cliente.orgaoExpedidor}</td>
             <td>${cliente.cep}</td>
             <td>${cliente.estadoCivil}</td>
+            <td><button onclick="excluirCliente(${cliente.id})" 
+                 style="background:none;border:none;font-size:18px;color:red;cursor:pointer;">❌</button></td>
         `;
 
         corpoTabela.appendChild(linha);
     });
+}
+
+async function excluirCliente(id) {
+    if (!confirm("Tem certeza que deseja excluir este cliente?")) return;
+
+    try {
+        const response = await fetch(`https://web-forms-t5o7.onrender.com/cliente/deletar/${id}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            alert("Cliente excluído com sucesso!");
+            buscarTodosClientes(); 
+        } else {
+            alert("Erro ao excluir cliente.");
+        }
+    } catch (error) {
+        console.error("Erro ao excluir cliente:", error);
+        alert("Erro ao excluir cliente.");
+    }
 }
 
 window.onload = () => {
